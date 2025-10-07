@@ -17,7 +17,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Titlebar (exact match with home page) */
+/* Titlebar */
 .titlebar {
   height: 10vh;
   min-height: 56px;
@@ -120,7 +120,7 @@ iframe {
   transform: scale(1.1);
 }
 
-/* Grid (copied from home page) */
+/* Grid */
 .grid {
   flex: 1;
   display: grid;
@@ -130,6 +130,7 @@ iframe {
   box-sizing: border-box;
 }
 
+/* Card */
 .card {
   position: relative;
   border-radius: var(--radius);
@@ -141,6 +142,7 @@ iframe {
   border: 1px solid var(--card-border);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 38vh; /* Increased height for better proportions */
 }
 
 .card:hover {
@@ -164,7 +166,7 @@ iframe {
 .card-content {
   position: relative;
   width: 100%;
-  height: 40%;
+  height: 45%; /* Increased from 40% for taller content area */
   padding: 16px;
   background: var(--panel);
   backdrop-filter: blur(10px);

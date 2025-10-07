@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>bloodmoney</title>
+    <link rel="stylesheet" href="bloodmoney.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Round" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="titlebar">
+      <div class="titlebar-left">
+        <span class="material-icons-round">terminal</span>
+        <span class="brand">rigatoni534</span>
+      </div>
+
+      <nav class="titlebar-right">
+        <a href="https://rigatoni534.github.io/home/" class="nav-button">
+          <span class="material-icons-round">home</span>
+          <span class="label">Home</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="game-container">
+      <h1>bloodmoney</h1>
+      <div class="iframe-wrapper">
+        <iframe
+          id="gameFrame"
+          src="https://bloodmoney.1games.io/"
+          allowfullscreen
+        ></iframe>
+        <button class="fullscreen-button" id="fullscreenBtn">
+          <span class="material-icons-round">fullscreen</span>
+        </button>
+      </div>
+    </main>
+
+    <section class="grid">
+      <article class="card" style="background-image:url('https://picsum.photos/900/600?2');">
+        <div class="card-content">
+          <h2>Unreleased</h2>
+          <p>Coming soon!</p>
+          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+        </div>
+      </article>
+
+      <article class="card" style="background-image:url('https://picsum.photos/900/600?3');">
+        <div class="card-content">
+          <h2>Unreleased</h2>
+          <p>Coming later!</p>
+          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+        </div>
+      </article>
+
+      <article class="card" style="background-image:url('https://picsum.photos/900/600?4');">
+        <div class="card-content">
+          <h2>Unreleased</h2>
+          <p>Coming last!</p>
+          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      const fullscreenBtn = document.getElementById("fullscreenBtn");
+      const gameFrame = document.getElementById("gameFrame");
+      fullscreenBtn.addEventListener("click", () => {
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        } else {
+          gameFrame.requestFullscreen();
+        }
+      });
+    </script>
+  </body>
+</html>

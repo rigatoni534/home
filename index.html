@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Snowrider 3D</title>
+    <title>rigatoni534</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Round" rel="stylesheet" />
+    <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet"
+          />
+    <link
+          href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Round"
+          rel="stylesheet"
+          />
   </head>
-
   <body>
     <header class="titlebar">
       <div class="titlebar-left">
@@ -17,33 +22,39 @@
       </div>
 
       <nav class="titlebar-right">
-        <a href="https://rigatoni534.github.io/home/" class="nav-button">
-          <span class="material-icons-round">home</span>
-          <span class="label">Home</span>
+        <a href="chrome://new-tab-page" class="nav-button">
+          <span class="material-icons-round">masks</span>
+          <span class="label">Mask</span>
+        </a>
+        <a href="https://rigatoni534.github.io" class="nav-button">
+          <span class="material-icons-round">title</span>
+          <span class="label">Title</span>
+        </a>
+        <a href="about:blank" class="nav-button">
+          <span class="material-icons-round">crop_square</span>
+          <span class="label">Blank</span>
         </a>
       </nav>
     </header>
 
-    <main class="game-container">
-      <h1>Snowrider 3D</h1>
-      <div class="iframe-wrapper">
-        <iframe
-          id="gameFrame"
-          src="https://rigatoni534.github.io/snowrider3D/"
-          allowfullscreen
-        ></iframe>
-        <button class="fullscreen-button" id="fullscreenBtn">
-          <span class="material-icons-round">fullscreen</span>
-        </button>
-      </div>
-    </main>
+    <main class="grid">
+      <article class="card" style="background-image:url('https://picsum.photos/900/600?1');">
+        <div class="card-content">
+          <h2>Snow Rider 3D</h2>
+          <p>Ride down some snow while avoiding obstacles!</p>
+          <a class="card-button" href="https://rigatoni534.github.io/snowrider3D/">
+            <span class="material-icons-round">arrow_forward</span>
+          </a>
+        </div>
+      </article>
 
-    <section class="grid">
       <article class="card" style="background-image:url('https://picsum.photos/900/600?2');">
         <div class="card-content">
           <h2>Unreleased</h2>
           <p>Coming soon!</p>
-          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+          <a class="card-button" href="#">
+            <span class="material-icons-round">arrow_forward</span>
+          </a>
         </div>
       </article>
 
@@ -51,7 +62,9 @@
         <div class="card-content">
           <h2>Unreleased</h2>
           <p>Coming later!</p>
-          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+          <a class="card-button" href="#">
+            <span class="material-icons-round">arrow_forward</span>
+          </a>
         </div>
       </article>
 
@@ -59,21 +72,11 @@
         <div class="card-content">
           <h2>Unreleased</h2>
           <p>Coming last!</p>
-          <a class="card-button" href="#"><span class="material-icons-round">arrow_forward</span></a>
+          <a class="card-button" href="#">
+            <span class="material-icons-round">arrow_forward</span>
+          </a>
         </div>
       </article>
-    </section>
-
-    <script>
-      const fullscreenBtn = document.getElementById("fullscreenBtn");
-      const gameFrame = document.getElementById("gameFrame");
-      fullscreenBtn.addEventListener("click", () => {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else {
-          gameFrame.requestFullscreen();
-        }
-      });
-    </script>
+    </main>
   </body>
 </html>
